@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Botones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+</head>
+<body>
+    <h1>Generador de Botones</h1>
+    <input type="text" id="cant"/>
+    <button name="Generar" id="bttn" type="button">Generar!</button>
+    <div class="container-fluid">
+        <div class="row">
+                <div class="col-3" id="left"></div>
+                <div class="col-6" id="mid"></div>
+                <div class="col-3" id="right"></div>
+        </div>
+    </div>
+
+    <script src="script/generadordB.js"></script>
+    <script>
+        let numero = document.getElementById('cant');
+        let boton = document.getElementById('bttn');
+        boton.addEventListener('click', () => {app.generar(numero.value)});
+    </script>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #cant{
+            background-color:ghostwhite;
+            text-align: center;
+        }
+        #bttn{
+            color:rgb(0, 0, 0);
+            background-color: rgba(255, 255, 255, 0.692);
+            text-align: center;
+        }
+    </style>
+</body>
+</html>
